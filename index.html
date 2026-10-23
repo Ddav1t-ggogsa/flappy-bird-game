@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f3f9f5" />
+    <meta
+      name="description"
+      content="Take a little flight. Tap to dodge the pipes and see how far you can go."
+    />
+    <title>Flappy Bird — Take a little flight</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="#" aria-label="Little Flight home">
+          <span class="brand-icon" aria-hidden="true">✳</span>
+          <span>little<span class="brand-dot">.</span>flight</span>
+        </a>
+        <span class="topbar-label"><span class="ready-dot"></span> YOUR SKY IS CLEAR</span>
+      </header>
+
+      <section class="game-layout" aria-labelledby="page-title">
+        <div class="intro">
+          <p class="eyebrow"><span></span> A LITTLE GAME OF TIMING</p>
+          <h1 id="page-title">Up, up<br /><span>and away.</span></h1>
+          <p class="intro-copy">
+            One tiny bird. A whole lot of pipes.<br class="desktop-break" />
+            How far can you fly?
+          </p>
+
+          <div class="how-to">
+            <span class="key-icon" aria-hidden="true">↑</span>
+            <p><strong>Tap, click, or press space</strong><br />Flap to fly. Don't bump into anything.</p>
+          </div>
+
+          <div class="personal-best">
+            <span class="best-icon" aria-hidden="true">✦</span>
+            <span class="best-label">YOUR PERSONAL BEST</span>
+            <span class="best-value" id="best-score">0</span>
+          </div>
+        </div>
+
+        <section class="game-card" aria-label="Flappy Bird game">
+          <div class="card-top">
+            <div class="game-label"><span class="game-dot"></span> LITTLE FLIGHT</div>
+            <button class="sound-button" id="sound-toggle" type="button" aria-pressed="false" aria-label="Turn sound on" title="Turn sound on">
+              <svg class="sound-on-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M11 5 6 9H3v6h3l5 4V5Z" />
+                <path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13" />
+              </svg>
+              <svg class="sound-off-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M11 5 6 9H3v6h3l5 4V5Z" />
+                <path d="m17 9 5 6m0-6-5 6" />
+              </svg>
+            </button>
+          </div>
+
+          <div class="game-stage" id="game-stage">
+            <canvas
+              id="game-canvas"
+              width="400"
+              height="600"
+              role="img"
+              aria-label="Flappy Bird game. Tap, click, or press space to flap and avoid pipes."
+              tabindex="0"
+            ></canvas>
+
+            <div class="hud" aria-hidden="true">
+              <span class="hud-score" id="current-score">0</span>
+              <span class="hud-best"><span>BEST</span><strong id="stage-best">0</strong></span>
+            </div>
+
+            <div class="game-overlay" id="game-overlay">
+              <div class="overlay-content" id="overlay-content">
+                <span class="overlay-bird" aria-hidden="true">✦</span>
+                <p class="overlay-eyebrow">READY WHEN YOU ARE</p>
+                <h2 id="overlay-title">Take a<br />little flight.</h2>
+                <p class="overlay-copy" id="overlay-copy">A tap is all it takes.</p>
+                <button class="play-button" id="play-button" type="button">
+                  <span id="play-label">Let's fly</span>
+                  <span aria-hidden="true">↗</span>
+                </button>
+                <span class="overlay-hint" id="overlay-hint">CLICK · TAP · SPACE</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-footer">
+            <span><span class="footer-star">✦</span> One flap at a time</span>
+            <span class="footer-tag">JUST FOR FUN</span>
+          </div>
+        </section>
+      </section>
+
+      <footer class="page-footer">
+        <span>TAKE A BREATH. TAKE A FLIGHT.</span>
+        <span class="footer-heart" aria-hidden="true">♥</span>
+        <span>MADE FOR A LITTLE BREAK</span>
+      </footer>
+    </main>
+  </body>
+</html>
